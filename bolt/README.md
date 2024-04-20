@@ -43,6 +43,7 @@ $ slack run
 To stop running locally, press `<CTRL> + C` to end the process.
 
 ### Linting
+
 Run ESLint for code formatting and linting:
 
 ```zsh
@@ -50,6 +51,7 @@ $ npm run lint
 ```
 
 ## Using Functions in Workflow Builder
+
 With your server running, your function is now ready for use in [Workflow Builder](https://api.slack.com/start#workflow-builder)! Add it as a custom step in a new or existing workflow, then run the workflow while your app is running.
 
 For more information on creating workflows and adding custom steps, read more [here](https://slack.com/help/articles/17542172840595-Create-a-new-workflow-in-Slack).
