@@ -30,9 +30,12 @@
   },
   "devDependencies": {
     "@slack/cli-hooks": "^1.1.0",
+    "@types/node": "^20.12.7",
     "eslint": "~8.57.0",
     "eslint-config-airbnb-base": "~15.0.0",
     "eslint-plugin-import": "~2.29.1",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
