@@ -46,11 +46,7 @@ Enter challenge code <token>
 これでslackにログインできる。
 
 ### ローカルでサーバーを立ち上げる
-```
-slack run local
-```
-
-### typescriptをコンパイル
+typescriptをコンパイルする。
 ```
 npm run tsc
 ```
@@ -58,6 +54,11 @@ tscでエラーになる場合はtypescriptをグローバルでinstallする。
 ```
 npm install -g typescript
 ```
+サーバーを立ち上げる。
+```
+slack run local
+```
+
 
 ## 質問
 1. URLからワークフローを起動
