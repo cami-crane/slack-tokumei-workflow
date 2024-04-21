@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "target": "es2022",
     "module": "commonjs",
     "lib": ["es2022", "dom"],
@@ -8,5 +9,5 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["app.js"],
+  "include": ["src/**/*"],
 }

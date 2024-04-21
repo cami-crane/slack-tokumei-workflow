@@ -57,6 +57,7 @@ app.action('sample_button', async ({ body, client, complete, fail }) => {
       channel: channel.id,
       ts: message.ts,
       text: 'Function completed successfully!',
+      blocks: body.message.blocks
     })
   } catch (error) {
     console.error(error)
