@@ -2,7 +2,7 @@
   "name": "bolt-js-custom-function-template",
   "version": "1.0.0",
   "description": "A custom function template for Slack apps",
-  "main": "app.js",
+  "main": "lib/app.js",
   "scripts": {
     "start": "node app.js",
     "mode:dev": "cp .env.dev .env",
