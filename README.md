@@ -26,6 +26,12 @@ SLACK_SIGNING_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 SLACK_BOT_TOKEN=xoxb-xxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxx
 PORT=3000
 ```
+.slackディレクトリを作成し、その配下に`config.json`を作成する。
+```
+{
+  "project_id": "xxxxxxxxxxxxxxxxxxxxx" // 自分のプロジェクトIDs
+}
+```
 
 ### slack cliでログインする
 ワークスペースにlogin
