@@ -44,6 +44,15 @@ Enter challenge code <token>
 slack run local
 ```
 
+### typescriptをコンパイル
+```
+tsc
+```
+tscでエラーになる場合はtypescriptをグローバルでinstallする。
+```
+npm install -g typescript
+```
+
 ## 質問
 1. URLからワークフローを起動
 2. フォームのモーダルを表示
