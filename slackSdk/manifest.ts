@@ -8,8 +8,8 @@ import SubmitIssueWorkflow from "./workflows/submit_issue.ts";
  * https://api.slack.com/automation/manifest
  */
 export default Manifest({
-  name: "tokumei",
-  description: "A basic sample that demonstrates issue submission to channel",
+  name: "TOKUMEI MATE TOLK",
+  description: "ワークフローを使用し、匿名で質問と回答ができるアプリです。",
   icon: "assets/default_new_app_icon.png",
   workflows: [SubmitIssueWorkflow],
   functions: [PostIssueMessage],
