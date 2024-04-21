@@ -1,7 +1,7 @@
 # slackのワークフローで匿名の質問・回答
 slackのチャンネルで匿名で質問と回答ができるワークフローを作成する。<br>
 
-## 環境構築
+## 環境構築（Bolt）
 slackのワークスペースとslack appを作ってあることが前提とする。<br>
 slack appは[bolt公式](https://slack.dev/bolt-js/ja-jp/tutorial/getting-started)を参照
 
@@ -26,6 +26,12 @@ SLACK_SIGNING_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 SLACK_BOT_TOKEN=xoxb-xxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxx
 PORT=3000
 ```
+.slackディレクトリを作成し、その配下に`config.json`を作成する。
+```
+{
+  "project_id": "xxxxxxxxxxxxxxxxxxxxx" // 自分のプロジェクトIDs
+}
+```
 
 ### slack cliでログインする
 ワークスペースにlogin
@@ -40,18 +46,19 @@ Enter challenge code <token>
 これでslackにログインできる。
 
 ### ローカルでサーバーを立ち上げる
+typescriptをコンパイルする。
+```
+npm run build
+```
+コンパイルエラーになる場合はtypescriptをグローバルでinstallする。
+```
+npm install -g typescript
+```
+サーバーを立ち上げる。
 ```
 slack run local
 ```
 
-### typescriptをコンパイル
-```
-tsc
-```
-tscでエラーになる場合はtypescriptをグローバルでinstallする。
-```
-npm install -g typescript
-```
 
 ## 質問
 1. URLからワークフローを起動
