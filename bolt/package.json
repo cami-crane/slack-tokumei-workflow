@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "mode:dev": "cp .env.dev .env",
+    "tsc": "tsc",
     "lint": "eslint --ext .js .",
     "lint-fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 400 --fix",
     "format": "prettier --write './**/*.{js,ts,tsx,html,css,json,md}'"

@@ -1,7 +1,4 @@
-const { App, LogLevel } = require('@slack/bolt')
-const { config } = require('dotenv')
-
-config()
+import { App, LogLevel } from '@slack/bolt'
 
 /** Initialization */
 const app = new App({
@@ -12,7 +9,7 @@ const app = new App({
 })
 
 /** Sample Function Listener */
-app.function('sample_function', async ({ client, inputs, fail }) => {
+app.function('sample_function', async ({ client, inputs, fail }: any) => {
   try {
     const { user_id } = inputs
 
@@ -44,7 +41,7 @@ app.function('sample_function', async ({ client, inputs, fail }) => {
 })
 
 /** Sample Action Listener */
-app.action('sample_button', async ({ body, client, complete, fail }) => {
+app.action('sample_button', async ({ body, client, complete, fail }: any) => {
   const { channel, message, user } = body
 
   try {
@@ -70,6 +67,7 @@ app.action('sample_button', async ({ body, client, complete, fail }) => {
   try {
     await app.start(process.env.PORT || 3000)
     console.log('⚡️ Bolt app is running! ⚡️')
+    console.log(process.env.SLACK_BOT_TOKEN)
   } catch (error) {
     console.error('Unable to start App', error)
   }

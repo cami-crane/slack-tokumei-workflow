@@ -46,7 +46,7 @@ slack run local
 
 ### typescriptをコンパイル
 ```
-tsc
+npm run tsc
 ```
 tscでエラーになる場合はtypescriptをグローバルでinstallする。
 ```
