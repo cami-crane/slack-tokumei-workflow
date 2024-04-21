@@ -1,7 +1,7 @@
 # slackのワークフローで匿名の質問・回答
 slackのチャンネルで匿名で質問と回答ができるワークフローを作成する。<br>
 
-## 環境構築
+## 環境構築（Bolt）
 slackのワークスペースとslack appを作ってあることが前提とする。<br>
 slack appは[bolt公式](https://slack.dev/bolt-js/ja-jp/tutorial/getting-started)を参照
 
