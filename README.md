@@ -48,9 +48,9 @@ Enter challenge code <token>
 ### ローカルでサーバーを立ち上げる
 typescriptをコンパイルする。
 ```
-npm run tsc
+npm run build
 ```
-tscでエラーになる場合はtypescriptをグローバルでinstallする。
+コンパイルエラーになる場合はtypescriptをグローバルでinstallする。
 ```
 npm install -g typescript
 ```
