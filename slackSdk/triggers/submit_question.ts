@@ -10,8 +10,8 @@ import SubmitQuestionWorkflow from "../workflows/submit_question.ts";
  */
 const submitQuestion: Trigger<typeof SubmitQuestionWorkflow.definition> = {
   type: TriggerTypes.Shortcut,
-  name: "Submit an question",
-  description: "Submit an question to the channel",
+  name: "匿名で質問する",
+  description: "匿名で相談したいときに、気軽に利用してください",
   workflow: "#/workflows/submit_question",
   inputs: {
     interactivity: {

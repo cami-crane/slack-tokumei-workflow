@@ -12,7 +12,7 @@ export const PostQuestionMessage = DefineFunction({
   title: "Post an question to channel",
   description: "Create an question message from submitted form",
   source_file: "functions/post_question_message.ts",
-  // FIXME: 入らなければ削除
+  // フォームの値を受け取る
   input_parameters: {
     properties: {
       channel: {
@@ -23,19 +23,20 @@ export const PostQuestionMessage = DefineFunction({
       },
       severity: {
         type: Schema.types.string,
-        description: "Severity of the question",
+        description: "質問内容",
       },
       description: {
         type: Schema.types.string,
-        description: "Description of the question",
+        description: "質問詳細",
       },
       summary: {
         type: Schema.types.string,
-        description: "Relevant link or URL",
+        description: "質問概要",
       },
     },
     required: ["submitting_user", "severity", "description", "channel"],
   },
+  // フォームの値を渡す
   output_parameters: {
     properties: {
       channel: {
@@ -46,15 +47,15 @@ export const PostQuestionMessage = DefineFunction({
       },
       severity: {
         type: Schema.types.string,
-        description: "Severity of the question",
+        description: "質問内容",
       },
       description: {
         type: Schema.types.string,
-        description: "Description of the question",
+        description: "質問詳細",
       },
       summary: {
         type: Schema.types.string,
-        description: "Relevant link or URL",
+        description: "質問概要",
       },
     },
     required: ["submitting_user", "severity", "description"],
@@ -87,48 +88,43 @@ export default SlackFunction(PostQuestionMessage, async ({ inputs, client }) => 
         type: "section",
         text: {
           type: "mrkdwn",
-          text: "質問が来ました！",
+          text: "質問が来ました！回答しましょう！\n===================================",
         },
       },
       {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: `質問項目: ${severity}\n\n`,
+          text: `【質問項目】\n${severity}\n\n`,
         },
       },
       {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: `概要:${summary}\n\n`,
+          text: `【概要】\n${summary}\n\n`,
         },
       },
       {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: `詳細:${description}\n\n`,
+          text: `【詳細】\n${description}\n\n`,
         },
       },
-    ],
-    text: "メッセージのテキスト",
-    attachments: [
       {
-        fallback: "ボタンをサポートしていないプラットフォーム用のテキスト",
-        callback_id: "button_click",
-        color: "#3AA3E3",
-        attachment_type: "default",
-        actions: [
+        type: "actions",
+        elements: [
           {
-            name: "reply",
-            text: "返信",
             type: "button",
-            value: "reply",
-            url: "https://slack.com/shortcuts/Ft073HST7NJW/3b97720ee62fc7807b729a0e064d3c08",
-          },
-        ],
-      },
+            text: {
+              type: "plain_text",
+              text: "匿名で回答する"
+            },
+            url: "https://slack.com/shortcuts/Ft077KCT9A3S/2bb72a07254938434b879716fa34f73a"
+          }
+        ]
+      }
     ],
   });
 

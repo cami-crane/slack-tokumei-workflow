@@ -8,8 +8,8 @@ import { PostQuestionMessage } from "../functions/post_question_message.ts";
  */
 const SubmitQuestionWorkflow = DefineWorkflow({
   callback_id: "submit_question",
-  title: "Submit an question",
-  description: "Submit an question to the channel",
+  title: "匿名で質問する",
+  description: "匿名で相談したいときに、気軽に利用してください",
   input_parameters: {
     properties: {
       interactivity: {
